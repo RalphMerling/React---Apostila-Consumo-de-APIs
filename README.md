@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# React - Apostila Consumo de APIs
 
-First, run the development server:
+Projeto desenvolvido na disciplina Programação Web II,
+utilizando Next.js, React e Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Objetivo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Criar um formulário de cadastro de clientes com
+preenchimento automático de endereço por meio da API ViaCEP.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tecnologias utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js
+- React
+- JavaScript
+- Tailwind CSS
+- API ViaCEP
 
-## Learn More
+## Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- Cadastro de dados básicos do cliente
+- Campos de endereço e contato
+- Consulta automática de endereço pelo CEP
+- Preenchimento de rua, bairro, estado e município
+- Mensagem de erro para CEP inexistente
+- Botão para limpar o formulário
+- Exibição dos dados cadastrados no console
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura do projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- src/app: páginas e layout principal
+- src/components/form: componentes do formulário
+- src/components/layout: cabeçalho, rodapé e container
+- src/models: estrutura inicial dos dados do cliente
+- src/services: comunicação com a API ViaCEP
 
-## Deploy on Vercel
+## Como executar
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Instale as dependências com npm install.
+2. Inicie o projeto com npm run dev.
+3. Acesse http://localhost:3000 no navegador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Funcionamento da API
+
+Ao digitar um CEP com 8 números, o sistema realiza uma
+requisição GET à API ViaCEP.
+
+Se o CEP existir, os campos de endereço são preenchidos
+automaticamente.
+
+Se o CEP não for encontrado, uma mensagem de erro será
+exibida.
+
+## Observações
+
+O projeto tem finalidade acadêmica.
+
+Os dados do formulário são exibidos no console do navegador,
+sem armazenamento em banco de dados.
+
+Para os testes, devem ser utilizados dados fictícios.
+
+## Disciplina
+
+Programação Web II
+
+Professor: Vitor H. V. Reis
+
+Senac RJ - 2026
